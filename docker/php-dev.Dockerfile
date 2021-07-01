@@ -54,3 +54,5 @@ COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 RUN /usr/local/bin/composer self-update
 
 WORKDIR /var/www/app
+
+CMD ["/usr/local/bin/php", "-S", "0.0.0.0:8080", "./public/index.php"]
